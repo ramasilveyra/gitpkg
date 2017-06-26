@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`while using extractTarball() should extract tarball successfully 1`] = `
+HashedFolder {
+  "children": Array [
+    HashedFolder {
+      "children": Array [
+        HashedFolder {
+          "children": Array [
+            HashedFile {
+              "hash": "8vwKhXYbbUHm5soiQgmXvw/kC+k=",
+              "name": "index.js",
+            },
+          ],
+          "hash": "rJQ8De30VGH1jlaMI7WDzlgrXIs=",
+          "name": "lib",
+        },
+        HashedFile {
+          "hash": "gon524qOo+f85zDzzz7PdjzJbDI=",
+          "name": "package.json",
+        },
+      ],
+      "hash": "J6KNlLO0sZjT3nb8KisV5AXNzMs=",
+      "name": "package",
+    },
+  ],
+  "hash": "4jqRdapZPHxsyk6zsSTxlHXWOII=",
+  "name": "simple-package",
+}
+`;
+
+exports[`while using extractTarball() should throw error with invalid tarball path 1`] = `"ENOENT: no such file or directory, open '/Users/ramasilveyra/dev/personal/gitpkg/test/fixtures/doesnt-exist-1.0.0.tgz'"`;

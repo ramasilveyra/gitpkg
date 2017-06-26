@@ -1,0 +1,5 @@
+{
+  "name": "simple-package",
+  "version": "1.0.0",
+  "main": "./lib/index.js"
+}

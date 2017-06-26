@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`while using the gitpkg cli should correctly handle publish command 1`] = `
+Object {
+  "_": Array [
+    "publish",
+  ],
+  "h": false,
+  "help": false,
+  "r": undefined,
+  "v": false,
+  "version": false,
+}
+`;
+
+exports[`while using the gitpkg cli should correctly handle publish command with registry arg 1`] = `
+Object {
+  "_": Array [
+    "publish",
+  ],
+  "h": false,
+  "help": false,
+  "r": "git@github.com:ramasilveyra/public-registry.git",
+  "registry": "git@github.com:ramasilveyra/public-registry.git",
+  "v": false,
+  "version": false,
+}
+`;

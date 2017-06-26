@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`while using readPackageManifest() should throw the proper error with package.json with invalid version 1`] = `"Invalid semver version."`;
+
+exports[`while using readPackageManifest() should throw the proper error with package.json with no name 1`] = `"Package doesn't have a name."`;
+
+exports[`while using readPackageManifest() should throw the proper error with package.json with no version 1`] = `"Package doesn't have a version."`;

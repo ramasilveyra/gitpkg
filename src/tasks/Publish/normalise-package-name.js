@@ -10,10 +10,10 @@ export default async function normalisePackageName(name) {
   return normalisePackageNameYarn(name);
 }
 
-function normalisePackageNameNpm(name) {
+export function normalisePackageNameNpm(name) {
   return name[0] === '@' ? name.substr(1).replace(/\//g, '-') : name;
 }
 
-function normalisePackageNameYarn(name) {
+export function normalisePackageNameYarn(name) {
   return name[0] === '@' ? name.substr(1).replace('/', '-') : name;
 }

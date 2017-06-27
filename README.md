@@ -64,13 +64,13 @@ $ npm install -g gitpkg
 Via the yarn client:
 
 ```bash
-$ yarn global add ramasilveyra/public-registry#gitpkg@1.0.0-beta.0-gitpkg
+$ yarn global add ramasilveyra/public-registry#gitpkg-v1.0.0-beta.1-gitpkg
 ```
 
 Via the npm client:
 
 ```bash
-$ npm install -g ramasilveyra/public-registry#gitpkg@1.0.0-beta.0-gitpkg
+$ npm install -g ramasilveyra/public-registry#gitpkg-v1.0.0-beta.1-gitpkg
 ```
 
 <h2 align="center">Usage</h2>

@@ -25,6 +25,14 @@ export default async function uploadPackage(pkg, pkgPath, registry) {
     throw err;
   }
   // move 'latest' tag for module ${gitTagLatest} to current setting
-  await execLikeShell(`git push --delete origin ${gitTagLatest}`, pkgTempDirPkg);
-  await execLikeShell(`git push tag origin ${gitTagLatest}`, pkgTempDirPkg);
+  try {
+    await execLikeShell(`git push --delete origin ${gitTagLatest}`, pkgTempDirPkg);
+  } catch (err) {
+    const msg = /unable to delete '.*': remote ref does not exist/;
+    if (!err.stderr.match(msg)) {
+      throw err; // unknown error, bubble up
+    }
+  }
+  await execLikeShell(`git tag ${gitTagLatest}`, pkgTempDirPkg);
+  await execLikeShell(`git push --tags`, pkgTempDirPkg);
 }

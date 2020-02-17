@@ -2,9 +2,9 @@ import ora from 'ora';
 import chalk from 'chalk';
 import pkg from '../../../package.json';
 import PublishTask from '../../tasks/Publish';
+import { getNearestConfigFile } from '../../tasks/Task/read-config';
 
 export const command = 'publish';
-
 export const describe = 'Publishes a package to a git repository as git tag';
 
 export const builder = {
@@ -16,7 +16,7 @@ export const builder = {
   }
 };
 
-export const handler = argv => {
+export const handler = async argv => {
   /* eslint-disable no-console */
   console.log(chalk.bold.white(`gitpkg publish v${pkg.version}`));
   const spinner = ora({ text: 'Processing...' }).start();
@@ -26,8 +26,14 @@ export const handler = argv => {
     spinner.text = `${chalk.gray(`[${subtaskNumber}/${subtaskCount}]`)} ${subtaskName}...`;
   });
 
+  const configFilePath = await getNearestConfigFile();
+
   return publish
-    .run({ registry: argv.registry })
+    .run({
+      registry: argv.registry,
+      pkgPath: process.cwd(),
+      configPath: configFilePath
+    })
     .then(packageInfo => {
       spinner.succeed(
         `${chalk.bold.green(

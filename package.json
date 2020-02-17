@@ -41,6 +41,7 @@
     "del": "^3.0.0",
     "end-of-stream": "^1.4.0",
     "execa": "^0.7.0",
+    "find-up": "^4.1.0",
     "git-remote-origin-url": "^2.0.0",
     "make-dir": "^1.0.0",
     "ora": "^1.3.0",

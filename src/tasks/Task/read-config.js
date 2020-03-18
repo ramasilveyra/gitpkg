@@ -21,8 +21,12 @@ export const defaultConfig = {
 
 export async function getNearestConfigFile() {
   // First check if config file is in same dir
-  if (await access(path.resolve(process.cwd(), configFileName))) {
-    return configFileName;
+  try {
+    if (await access(path.resolve(process.cwd(), configFileName))) {
+      return configFileName;
+    }
+  } catch (e) {
+    // Ignore
   }
 
   // Then check in parent directories

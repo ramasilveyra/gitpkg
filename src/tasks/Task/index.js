@@ -2,9 +2,7 @@ import events from 'events';
 import readPackageManifest from './read-package-manifest';
 import readConfig, { defaultConfig } from './read-config';
 
-const EventEmitter = events.EventEmitter;
-
-export default class Task extends EventEmitter {
+export default class Task extends events.EventEmitter {
   constructor() {
     super();
     this.pkg = null;

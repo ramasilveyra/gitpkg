@@ -35,7 +35,7 @@ export async function getNearestConfigFile() {
 
 /**
  * Returns an object with configurable settings.
- * 
+ *
  * @param {string} directory Path to config file.
  */
 export default async function readConfig(configPath) {
@@ -49,7 +49,7 @@ export default async function readConfig(configPath) {
       config = configClass();
     }
 
-    return Object.assign({}, defaultConfig, config);
+    return { ...defaultConfig, ...config };
   } catch (e) {
     return defaultConfig;
   }

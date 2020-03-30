@@ -5,11 +5,6 @@ Object {
   "_": Array [
     "publish",
   ],
-  "h": false,
-  "help": false,
-  "r": undefined,
-  "v": false,
-  "version": false,
 }
 `;
 
@@ -18,11 +13,7 @@ Object {
   "_": Array [
     "publish",
   ],
-  "h": false,
-  "help": false,
   "r": "git@github.com:ramasilveyra/public-registry.git",
   "registry": "git@github.com:ramasilveyra/public-registry.git",
-  "v": false,
-  "version": false,
 }
 `;

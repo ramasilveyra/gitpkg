@@ -3,10 +3,10 @@ import execLikeShell from './exec-like-shell';
 import getTempDir from './get-temp-dir';
 import getGitTagName from './get-git-tag-name';
 
-export default async function uploadPackage(pkg, pkgPath, registry) {
+export default async function uploadPackage(config, pkg, registry) {
   const pkgTempDir = await getTempDir(pkg);
   const pkgTempDirPkg = path.join(pkgTempDir, 'package');
-  const gitpkgPackageName = getGitTagName(pkg);
+  const gitpkgPackageName = getGitTagName(pkg, config);
   await execLikeShell('git init', pkgTempDirPkg);
   await execLikeShell('git add .', pkgTempDirPkg);
   await execLikeShell('git commit -m gitpkg', pkgTempDirPkg);

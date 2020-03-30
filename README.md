@@ -95,6 +95,26 @@ This flag tells gitpkg to publish the package to a specific gitpkg registry.
 
 You can also set the gitpkg registry permanently by adding  `"gitpkg":{"registry":"git@mygit.server:org/private-registry.git"}` to the package.json.
 
+<h2 align="center">Configuration</h2>
+
+You can also configure gitpkg with a config file. Create a file named `gitpkg.config.js` in the root of your project or in the root of a subpackage.
+
+### Available config settings
+
+#### registry
+Publish the package to a specific gitpkg registry. Same as the registry flag of the cli.
+
+#### getTagName
+Function used to create the git tags. The function receives one object `pkg`, which is the content of the package.json file.
+
+```js
+// Example content of gitpkg.config.js
+module.exports = () => ({
+    registry: 'git@mygit.server:org/private-registry.git',
+    getTagName: pkg => (`${ pkg.name }-v${ pkg.version }-gitpkg`)
+})
+```
+
 <h2 align="center">Contribute</h2>
 
 Feel free to dive in! [Open an issue](https://github.com/ramasilveyra/gitpkg/issues/new) or submit PRs.

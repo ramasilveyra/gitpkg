@@ -43,7 +43,7 @@ Also you can publish any gitpkg package to the same repository, so you can have 
 
 <h2 align="center">Install</h2>
 
-**Node.js v6.5 or newer** is required.
+**Node.js v10.12 or newer** is required.
 
 ### npm registry
 
@@ -93,7 +93,7 @@ $ gitpkg publish --registry git@mygit.server:org/private-registry.git
 
 This flag tells gitpkg to publish the package to a specific gitpkg registry.
 
-You can also set the gitpkg registry permanently by adding  `"gitpkg":{"registry":"git@mygit.server:org/private-registry.git"}` to the package.json.
+You can also set the gitpkg registry permanently by adding `"gitpkg":{"registry":"git@mygit.server:org/private-registry.git"}` to the package.json.
 
 <h2 align="center">Configuration</h2>
 
@@ -102,17 +102,19 @@ You can also configure gitpkg with a config file. Create a file named `gitpkg.co
 ### Available config settings
 
 #### registry
+
 Publish the package to a specific gitpkg registry. Same as the registry flag of the cli.
 
 #### getTagName
+
 Function used to create the git tags. The function receives one object `pkg`, which is the content of the package.json file.
 
 ```js
 // Example content of gitpkg.config.js
 module.exports = () => ({
-    registry: 'git@mygit.server:org/private-registry.git',
-    getTagName: pkg => (`${ pkg.name }-v${ pkg.version }-gitpkg`)
-})
+  registry: "git@mygit.server:org/private-registry.git",
+  getTagName: (pkg) => `${pkg.name}-v${pkg.version}-gitpkg`,
+});
 ```
 
 <h2 align="center">Contribute</h2>

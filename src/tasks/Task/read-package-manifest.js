@@ -7,14 +7,10 @@ const readFile = bluebird.promisify(fs.readFile);
 
 export default async function readPackageManifest(pkgPath) {
   const packagePath = path.resolve(pkgPath, 'package.json');
-  try {
-    const pkg = JSON.parse(await readFile(packagePath, 'utf-8'));
-    pkg.scripts = pkg.scripts || {};
-    validatePackageJSON(pkg);
-    return pkg;
-  } catch (e) {
-    throw e;
-  }
+  const pkg = JSON.parse(await readFile(packagePath, 'utf-8'));
+  pkg.scripts = pkg.scripts || {};
+  validatePackageJSON(pkg);
+  return pkg;
 }
 
 function validatePackageJSON(pkg) {

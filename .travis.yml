@@ -2,7 +2,7 @@ language: node_js
 cache: yarn
 matrix:
   include:
-  - node_js: "6"
+  - node_js: "10"
     script: yarn run test-ci
-  - node_js: "8"
+  - node_js: "12"
     script: yarn run test-ci-partial

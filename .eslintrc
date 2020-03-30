@@ -1,4 +1,7 @@
 {
-  "extends": "auth0-base/prettier",
-  "parser": "babel-eslint"
+  "extends": ["airbnb-base", "prettier"],
+  "parser": "babel-eslint",
+  "rules": {
+    "no-use-before-define": ["error", { "functions": false }]
+  }
 }

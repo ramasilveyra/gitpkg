@@ -24,6 +24,7 @@
 - [Usage](#usage)
   - [Publish](#publish)
 - [Contribute](#contribute)
+- [Troubleshooting](#troubleshooting)
 - [License](#license)
 
 <h2 align="center">Background</h2>
@@ -116,6 +117,19 @@ module.exports = () => ({
   getTagName: (pkg) => `${pkg.name}-v${pkg.version}-gitpkg`,
 });
 ```
+
+<h2 align="center">Troubleshooting</h2>
+
+## Usage with Gerrit
+
+gitpkg works by publishing tags that contain only the files in a package.  The commits in these tags don't appear on any branch, so Gerrit will reject them by default:
+
+```
+! [remote rejected] …
+    (prohibited by Gerrit: update for creating new commit object not permitted)
+```
+
+To gain the permission gitpkg needs, add **Create Reference** and **Push** entries to the `refs/tags/*` reference in the _Access_ settings of your repository.
 
 <h2 align="center">Contribute</h2>
 

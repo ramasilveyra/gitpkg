@@ -5,6 +5,7 @@
   <a href="https://codecov.io/github/ramasilveyra/gitpkg?branch=master">
     <img src="https://img.shields.io/codecov/c/github/ramasilveyra/gitpkg.svg?branch=master" alt="Codecoverage">
   </a>
+<a href="https://app.fossa.com/projects/git%2Bgithub.com%2Framasilveyra%2Fgitpkg?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Framasilveyra%2Fgitpkg.svg?type=shield"/></a>
 </div>
 
 <h1 align="center">gitpkg</h1>
@@ -126,3 +127,7 @@ gitpkg follows the [Contributor Covenant](http://contributor-covenant.org/versio
 <h2 align="center">License</h2>
 
 [MIT © Ramiro Silveyra d'Avila](LICENSE.md)
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Framasilveyra%2Fgitpkg.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Framasilveyra%2Fgitpkg?ref=badge_large)

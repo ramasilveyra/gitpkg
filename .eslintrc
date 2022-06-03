@@ -1,6 +1,6 @@
 {
   "extends": ["airbnb-base", "prettier"],
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "rules": {
     "no-use-before-define": ["error", { "functions": false }]
   }

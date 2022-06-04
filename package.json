@@ -8,6 +8,7 @@
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "clean": "del ./build",
     "lint": "eslint .",
+    "prepare": "husky install",
     "prepublish": "yarn run clean && yarn run build",
     "test-ci-partial": "yarn run test-coverage",
     "test-ci": "yarn run lint && yarn run test-ci-partial && codecov",
@@ -56,15 +57,15 @@
     "babel-plugin-dynamic-import-node": "^2.3.0",
     "codecov": "^3.6.5",
     "conventional-changelog-cli": "^2.0.31",
-    "del-cli": "^3.0.0",
+    "del-cli": "^4.0.1",
     "eslint": "^8.17.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.20.2",
-    "folder-hash": "^3.3.0",
-    "husky": "^4.2.3",
+    "folder-hash": "^4.0.2",
+    "husky": "^8.0.1",
     "jest": "^28.1.0",
-    "lint-staged": "^10.0.10",
+    "lint-staged": "^13.0.0",
     "prettier": "^2.0.2"
   },
   "gitpkg": {
@@ -86,10 +87,5 @@
   "lint-staged": {
     "*.js": "eslint --cache --fix",
     "*.{js,css,md}": "prettier --write"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   }
 }

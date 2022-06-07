@@ -35,7 +35,6 @@ export default class PublishTask extends Task {
     await uploadPackage(this.config, this.pkg, gitpkgRegistryURL);
     // 5 - Run postpublish scripts.
     this.emit('subtask', 6, 6, '🏇 Running postpublish scripts');
-    await execLifecycleScript('publish', this.pkg, pkgPath);
     await execLifecycleScript('postpublish', this.pkg, pkgPath);
 
     return {

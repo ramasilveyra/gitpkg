@@ -87,5 +87,14 @@
   "lint-staged": {
     "*.js": "eslint --cache --fix",
     "*.{js,css,md}": "prettier --write"
+  },
+  "prettier": {
+    "trailingComma": "none",
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true,
+    "printWidth": 100,
+    "endOfLine": "lf",
+    "arrowParens": "avoid"
   }
 }

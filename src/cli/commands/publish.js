@@ -36,9 +36,9 @@ export const handler = async argv => {
     })
     .then(packageInfo => {
       spinner.succeed(
-        `${chalk.bold.green(
-          'success'
-        )} Package uploaded to ${packageInfo.gitpkgRegistry} with the name ${packageInfo.gitpkgPackage}.`
+        `${chalk.bold.green('success')} Package uploaded to ${
+          packageInfo.gitpkgRegistry
+        } with the name ${packageInfo.gitpkgPackage}.`
       );
       console.log(`+ ${packageInfo.name}@${packageInfo.version}`);
     })

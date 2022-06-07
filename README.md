@@ -113,8 +113,8 @@ Function used to create the git tags. The function receives one object `pkg`, wh
 ```js
 // Example content of gitpkg.config.js
 module.exports = () => ({
-  registry: "git@mygit.server:org/private-registry.git",
-  getTagName: (pkg) => `${pkg.name}-v${pkg.version}-gitpkg`,
+  registry: 'git@mygit.server:org/private-registry.git',
+  getTagName: pkg => `${pkg.name}-v${pkg.version}-gitpkg`
 });
 ```
 
@@ -122,7 +122,7 @@ module.exports = () => ({
 
 ## Usage with Gerrit
 
-gitpkg works by publishing tags that contain only the files in a package.  The commits in these tags don't appear on any branch, so Gerrit will reject them by default:
+gitpkg works by publishing tags that contain only the files in a package. The commits in these tags don't appear on any branch, so Gerrit will reject them by default:
 
 ```
 ! [remote rejected] …

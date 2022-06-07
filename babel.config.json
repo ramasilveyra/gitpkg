@@ -6,9 +6,7 @@
         "targets": {
           "node": "10.12.0"
         },
-        "exclude": [
-          "transform-regenerator"
-        ]
+        "exclude": ["transform-regenerator"]
       }
     ]
   ],

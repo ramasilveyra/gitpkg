@@ -1,3 +1,11 @@
+# [1.0.0-beta.3](https://github.com/ramasilveyra/gitpkg/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2022-06-07)
+
+### Bug Fixes
+
+- remove npm publish command ([439f75e](https://github.com/ramasilveyra/gitpkg/commit/439f75e94f8685f50587f8937036ad05fdae02fe))
+- bypass git hooks by default ([38c191c](https://github.com/ramasilveyra/gitpkg/commit/38c191c8e9d2ca2ef0275a7742d92df598d45c31))
+- update dependencies and fix automatic security warnings ([65a686e](https://github.com/ramasilveyra/gitpkg/commit/65a686e6d0610cc8b21745bbae463f6018bd4c8e)) ([f920ff3](https://github.com/ramasilveyra/gitpkg/commit/f920ff349e0fd527568bf2c4819350b8d5614675)) ([b5cefda](https://github.com/ramasilveyra/gitpkg/commit/b5cefdacb3a50f594a515760afa2a5636aa00f07)) ([372d002](https://github.com/ramasilveyra/gitpkg/commit/372d0027b8eb127d7dcf968a3dec160bad90101a))
+
 # [1.0.0-beta.2](https://github.com/ramasilveyra/gitpkg/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2020-03-30)
 
 ### Build System

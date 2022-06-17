@@ -1,3 +1,10 @@
+# [1.0.0-beta.4](https://github.com/ramasilveyra/gitpkg/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2022-06-17)
+
+### Bug Fixes
+
+- make gitpkg publish idempotent ([#62](https://github.com/ramasilveyra/gitpkg/issues/62)) ([17d3f85](https://github.com/ramasilveyra/gitpkg/commit/17d3f85b27cbe5b4a05704392046d12d1a4fc914)), closes [#60](https://github.com/ramasilveyra/gitpkg/issues/60)
+- support yarn berry ([#61](https://github.com/ramasilveyra/gitpkg/issues/61)) ([557ef16](https://github.com/ramasilveyra/gitpkg/commit/557ef16876840864530670efe743c78aaed63760)), closes [#43](https://github.com/ramasilveyra/gitpkg/issues/43)
+
 # [1.0.0-beta.3](https://github.com/ramasilveyra/gitpkg/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2022-06-07)
 
 ### Bug Fixes

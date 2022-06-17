@@ -1,24 +1,8 @@
-import execa from 'execa';
-
-let cacheNpmClient = null;
+import getYarnLineage from './get-yarn-lineage';
 
 export default async function getNpmClient() {
-  if (cacheNpmClient) {
-    return cacheNpmClient;
-  }
-
-  const useYarn = await shouldUseYarn();
-  const npmClient = useYarn ? 'yarn' : 'npm';
-  cacheNpmClient = npmClient;
+  const yarnLineage = await getYarnLineage();
+  const npmClient = yarnLineage === null ? 'npm' : 'yarn';
 
   return npmClient;
-}
-
-async function shouldUseYarn() {
-  try {
-    await execa('yarn', ['--version']);
-    return true;
-  } catch (e) {
-    return false;
-  }
 }
